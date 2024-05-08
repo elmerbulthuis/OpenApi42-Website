@@ -100,8 +100,8 @@ console.log(resultValue); // prints 123
         <h1>Sponsors</h1>
         <p>We love our sponsors! And we would love you to be a sponsor too!</p>
         <p>
-          OpenApi42 completely dependent sponsorship. If you are using and enjoying OpenApi42, then
-          consider making a donation.
+          OpenApi42 is completely dependent sponsorship. If you are using and enjoying OpenApi42,
+          then consider making a donation.
         </p>
         <p>Sponsors get exclusive benefits!</p>
         <ul>
