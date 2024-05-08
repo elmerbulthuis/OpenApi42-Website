@@ -28,7 +28,7 @@ export const className = css`
   --content-spacing: 20px;
 
   --sponsor-logo-width: 150px;
-  --header-height: 600px;
+  --header-height: calc(calc(var(--default-font-size) + calc(var(--content-padding) * 2)) * 5);
 `;
 
 export function Root() {

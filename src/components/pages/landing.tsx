@@ -5,7 +5,7 @@ import { LinkButton, SponsorButton } from "../elements/index.js";
 export function Landing() {
   return (
     <>
-      <Header>Header</Header>
+      <Header>OpenApi42</Header>
       <Section alternative>
         <p>
           OpenApi42 will generate correct and performant client and server code in many (currently
@@ -92,7 +92,8 @@ console.log(resultValue);
       <Section>
         <Justify>
           <LinkButton href="">Quick start</LinkButton>
-          <LinkButton href="">Usage</LinkButton>
+          <LinkButton href="">Guides</LinkButton>
+          <LinkButton href="https://github.com/LuvDaSun/OpenApi42-Examples">Examples</LinkButton>
         </Justify>
       </Section>
       <Section>

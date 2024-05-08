@@ -1,7 +1,7 @@
-<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="100%" height="20%" y="0%" fill="#ec003d" />  
-  <rect width="100%" height="20%" y="20%" fill="#c1003d" />  
-  <rect width="100%" height="20%" y="40%" fill="#a2003d" />  
-  <rect width="100%" height="20%" y="60%" fill="#87003d" />  
-  <rect width="100%" height="20%" y="80%" fill="#71003d" />  
+<svg width="1" height="5" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1" height="1" y="0" fill="#ec003d" />  
+  <rect width="1" height="1" y="1" fill="#c1003d" />  
+  <rect width="1" height="1" y="2" fill="#a2003d" />  
+  <rect width="1" height="1" y="3" fill="#87003d" />  
+  <rect width="1" height="1" y="4" fill="#71003d" />  
 </svg>

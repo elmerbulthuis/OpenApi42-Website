@@ -17,6 +17,7 @@ const outerClassName = css`
   width: 100%;
 
   background-image: url(lds-background.svg);
+  background-repeat: repeat-x;
   background-size: contain;
 `;
 
