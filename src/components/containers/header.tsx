@@ -34,24 +34,29 @@ export function Header(properties: React.PropsWithChildren<Properties>) {
   const spacerElement = React.useRef<HTMLElement>(null);
   const outerElement = React.useRef<HTMLElement>(null);
   const innerElement = React.useRef<HTMLDivElement>(null);
+  let animationFrame = 0;
 
   function updateHeight() {
-    if (spacerElement.current == null) {
-      return;
-    }
-    if (outerElement.current == null) {
-      return;
-    }
-    if (innerElement.current == null) {
-      return;
-    }
+    window.cancelAnimationFrame(animationFrame);
 
-    const maximumHeight = spacerElement.current.offsetHeight;
-    const minimumHeight = innerElement.current.offsetHeight;
-    const maybeHeight = maximumHeight - window.scrollY;
+    animationFrame = window.requestAnimationFrame(() => {
+      if (spacerElement.current == null) {
+        return;
+      }
+      if (outerElement.current == null) {
+        return;
+      }
+      if (innerElement.current == null) {
+        return;
+      }
 
-    const height = Math.min(Math.max(maybeHeight, minimumHeight), maximumHeight);
-    outerElement.current.style.height = `${height}px`;
+      const maximumHeight = spacerElement.current.offsetHeight;
+      const minimumHeight = innerElement.current.offsetHeight;
+      const maybeHeight = maximumHeight - window.scrollY;
+
+      const height = Math.min(Math.max(maybeHeight, minimumHeight), maximumHeight);
+      outerElement.current.style.height = `${height}px`;
+    });
   }
 
   React.useEffect(() => {
