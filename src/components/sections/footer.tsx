@@ -1,13 +1,10 @@
-import { css } from "@emotion/css";
 import * as React from "react";
-import { colors, sizes } from "../../constants/index.js";
-
-const className = css`
-  font-size: ${sizes.fontSize};
-  color: ${colors.textColor};
-  background-color: ${colors.alternativeBackground};
-`;
+import * as styles from "../../styles/index.js";
 
 export function Footer() {
-  return <footer className={className}>some footer</footer>;
+  return (
+    <footer className={styles.alternativeSection}>
+      <div className={styles.sectionContent}>some footer</div>
+    </footer>
+  );
 }
