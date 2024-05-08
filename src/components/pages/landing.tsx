@@ -169,9 +169,11 @@ console.log(resultValue);
         </p>
       </Section>
       <Footer>
-        <p>
-          Made with <Emoji>❤️</Emoji> in Scheveningen by LuvDaSun B.V.
-        </p>
+        <Justify>
+          <p>
+            Made with <Emoji>❤️</Emoji> in Scheveningen by LuvDaSun B.V.
+          </p>
+        </Justify>
       </Footer>
     </>
   );
