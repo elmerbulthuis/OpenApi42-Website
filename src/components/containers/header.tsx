@@ -11,7 +11,8 @@ const outerClassName = css`
   color: var(--default-color);
 
   width: 100%;
-  height: var(--default-font-size);
+
+  background-color: var(--background-color);
 `;
 
 const innerClassName = css`

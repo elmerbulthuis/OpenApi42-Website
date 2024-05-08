@@ -3,6 +3,7 @@ import * as React from "react";
 
 const className = css`
   cursor: pointer;
+  text-decoration: none;
 
   display: inline-block;
 
@@ -14,8 +15,6 @@ const className = css`
 
   padding: var(--button-padding-height) var(--button-padding-width);
   border-radius: var(--button-border-radius);
-
-  text-decoration: none;
 `;
 
 interface Properties {

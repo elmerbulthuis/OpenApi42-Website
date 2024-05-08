@@ -4,8 +4,8 @@ import * as React from "react";
 
 const codeClassName = css`
   display: block;
-  white-space: pre-wrap;
-  padding: 20px;
+  white-space: pre;
+  padding: var(--content-spacing);
 `;
 
 interface Properties {

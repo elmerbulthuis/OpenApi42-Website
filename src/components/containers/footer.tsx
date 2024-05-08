@@ -6,6 +6,8 @@ const outerClassName = css`
   font-size: var(--default-font-size);
 
   color: var(--default-color);
+
+  background-color: var(--alternative-background-color);
 `;
 
 const innerClassName = css`

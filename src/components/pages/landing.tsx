@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Code, Footer, Header, Justify, Section, Tabs } from "../containers/index.js";
-import { LinkButton } from "../elements/index.js";
+import { LinkButton, SponsorButton } from "../elements/index.js";
 
 export function Landing() {
   return (
@@ -21,8 +21,9 @@ openapi: 3.0.2
 info:
   title: Reverse API
   description: |-
-    This API is able to take a string and reverse it. It has only one endpoint! Use this API
-    to get started with OpenApi42.
+    This API is able to take a string and reverse it. It
+    has only one endpoint! Use this API to get started
+    with OpenApi42.
   version: 0.1.0
 
 paths:
@@ -30,8 +31,8 @@ paths:
     post:
       operationId: reverse
       description: >
-        Reads a string from the request body and returns the reversed value in the body of
-        the response.
+        Reads a string from the request body and returns
+        the reversed value in the body of the response.
       requestBody:
         content:
           "text/plain": {}
@@ -49,17 +50,21 @@ import * as api from "reverse-api";
 
 const server = new api.Server();
 
-server.registerReverseOperation(async (incomingRequest) => {
-  const originalText = await incomingRequest.value();
-  const characters = [...originalText];
-  characters.reverse();
-  const reversedText = characters.join("");
-  return {
-    status: 200,
-    contentType: "text/plain",
-    value: () => reversedText,
-  };
-});
+server.registerReverseOperation(
+  async (incomingRequest) => {
+    const originalText = await incomingRequest.value();
+    
+    const characters = [...originalText];
+    characters.reverse();
+    const reversedText = characters.join("");
+    
+    return {
+      status: 200,
+      contentType: "text/plain",
+      value: () => reversedText,
+    };
+  }
+);
 
 await api.lib.listen(server, { port: 8080 });
             `}
@@ -67,14 +72,15 @@ await api.lib.listen(server, { port: 8080 });
           <Code
             type="typescript"
             code={`
-const baseUrl = new URL("http://localhost:8080");
+import * as api from "reverse-api";
+            
+const api.defaultClientConfiguration.baseUrl =
+  new URL("http://localhost:8080");
 const result = await api.reverse(
   {
     contentType: "text/plain",
     value: () => "123",
   },
-  {},
-  { baseUrl },
 );
 const resultValue = await result.value();
 
@@ -89,8 +95,18 @@ console.log(resultValue);
           <LinkButton href="">Usage</LinkButton>
         </Justify>
       </Section>
-      <Section>Sponsors</Section>
-      <Section>Showcases</Section>
+      <Section>
+        <p>We love our sponsors! And we would love you to be a sponsor too!</p>
+        <Justify>
+          <SponsorButton href="https://www.nationaalwatersportdiploma.nl/" image="nawadi.svg" />
+        </Justify>
+      </Section>
+      <Section alternative>
+        <p>If you are using OpenApi42, your name could be here!</p>
+        <Justify>
+          <SponsorButton href="https://www.nationaalwatersportdiploma.nl/" image="nawadi.svg" />
+        </Justify>
+      </Section>
       <Section>Community</Section>
       <Footer>Footer</Footer>
     </>
