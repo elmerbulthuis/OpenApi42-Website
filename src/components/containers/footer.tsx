@@ -22,8 +22,8 @@ interface Properties {}
 
 export function Footer(properties: React.PropsWithChildren<Properties>) {
   return (
-    <section className={outerClassName}>
+    <footer className={outerClassName}>
       <div className={innerClassName}>{properties.children}</div>
-    </section>
+    </footer>
   );
 }

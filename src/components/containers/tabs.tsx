@@ -63,7 +63,9 @@ export function Tabs(properties: React.PropsWithChildren<Properties>) {
     <div>
       <div className={labelsClassName}>
         {labels.map((label, index) => (
-          <a onClick={() => setActiveIndex(index)}>{label}</a>
+          <a key={index} onClick={() => setActiveIndex(index)}>
+            {label}
+          </a>
         ))}
       </div>
       <div className={tabsClassName}>{properties.children}</div>
