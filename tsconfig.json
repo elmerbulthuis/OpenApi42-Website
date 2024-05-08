@@ -1,0 +1,14 @@
+{
+  "extends": "@tsconfig/node21",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./transpiled",
+    "declarationDir": "./typed",
+    "sourceMap": true,
+    "declaration": true,
+    "composite": true,
+    "lib": ["es2023", "DOM"],
+    "jsx": "react"
+  },
+  "include": ["src/**/*"]
+}
