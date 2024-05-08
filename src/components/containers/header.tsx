@@ -9,7 +9,6 @@ const outerClassName = css`
   position: fixed;
   top: 0;
 
-  font-family: var(--default-font-family);
   font-size: var(--default-font-size);
 
   color: var(--default-color);

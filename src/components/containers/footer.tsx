@@ -2,7 +2,6 @@ import { css } from "@emotion/css";
 import * as React from "react";
 
 const outerClassName = css`
-  font-family: var(--default-font-family);
   font-size: var(--default-font-size);
 
   color: var(--default-color);

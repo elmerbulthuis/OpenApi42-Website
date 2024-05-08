@@ -4,6 +4,7 @@ words:
   - iife
   - nawadi
   - openapi
+  - slnt
 useGitignore: true
 files:
   - "**"
