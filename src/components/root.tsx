@@ -16,7 +16,7 @@ export const className = cx([
 
     --default-font-family: sans-serif;
 
-    --default-font-size: 50px;
+    --default-font-size: 21px;
 
     --minimum-content-width: 600px;
     --maximum-content-width: 900px;
@@ -24,8 +24,9 @@ export const className = cx([
 
     --button-padding-width: 20px;
     --button-padding-height: 10px;
-    --button-spacing: 10px;
     --button-border-radius: 10px;
+
+    --content-spacing: 20px;
   `,
   css`
     padding-top: calc(var(--content-padding) * 2 + var(--default-font-size));
