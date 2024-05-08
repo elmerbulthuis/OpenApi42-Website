@@ -8,7 +8,7 @@ const className = css`
   display: inline-block;
 
   color: var(--default-color);
-  background-color: var(--brand1-color);
+  background-color: var(--brand5-color);
   &:hover {
     background-color: var(--brand1-color);
   }
